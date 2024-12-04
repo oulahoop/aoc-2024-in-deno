@@ -7,7 +7,7 @@ export function solution() {
 
 function solutionPart1(input: string[]) {
     let totalXMas = 0;
-    let charMatrix = input.map((line) => line.split(''));
+    const charMatrix = input.map((line) => line.split(''));
     for(let i = 0; i < input.length; i++) {
         for (let j = 0; j < input[i].length; j++) {
             if (charMatrix[i][j] == 'X') {
@@ -75,7 +75,7 @@ function solutionPart1(input: string[]) {
 
 function solutionPart2(input: string[]) {
     let totalXMas = 0;
-    let charMatrix = input.map((line) => line.split(''));
+    const charMatrix = input.map((line) => line.split(''));
     const map = new Map<string, number>();
     for(let i = 0; i < input.length; i++) {
         for (let j = 0; j < input[i].length; j++) {
@@ -131,7 +131,7 @@ function solutionPart2(input: string[]) {
         }
     }
 
-    map.forEach((value, key) => {
+    map.forEach((value) => {
         if (value == 2) {
             totalXMas++;
         }
